@@ -45,9 +45,8 @@ class MainActivity : ComponentActivity() {
             navigationBarStyle = androidx.activity.SystemBarStyle.dark(
                 scrim = Color.Black.toArgb() // Nav bar background
             ),
-            statusBarStyle = androidx.activity.SystemBarStyle.light(
+            statusBarStyle = androidx.activity.SystemBarStyle.dark(
                 Color.Black.toArgb(),
-                Color.White.toArgb()// Keep status bar light if you want dark icons
             )
         )
         setContent {
