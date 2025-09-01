@@ -8,6 +8,7 @@ class KalmanLatLong(private val qMetresPerSecond: Float) {
     private var lng = 0.0
 
     fun process(lat_measurement: Double, lng_measurement: Double, accuracy: Float, time: Long) {
+        println("Kalman filter processing started")
         if (accuracy < minAccuracy) minAccuracy = accuracy
 
         if (variance < 0) {
@@ -26,8 +27,16 @@ class KalmanLatLong(private val qMetresPerSecond: Float) {
             variance *= (1 - k)
         }
         timestampMs = time
+        println("Kalman filter processing ended")
     }
 
-    fun getLat() = lat
-    fun getLng() = lng
+    fun getLat(): Double {
+        println("Latitude: $lat")
+        return lat
+    }
+    fun getLng(): Double {
+        println("Longitude: $lng")
+        return lng
+    }
+
 }

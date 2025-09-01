@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+keystore.properties
+myFitnessTrackerReleaseKey.jks
+C:\Users\arman\AndroidStudioProjects\FitnessTracker\app\src\main\java\com\example\fitnesstracker\Test
